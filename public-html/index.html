@@ -1,0 +1,386 @@
+<!DOCTYPE html5>
+<html ng-app="1st">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="bootstrap js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+    <script type="text/javascript" src="angular/module.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+</head>
+<body ng-controller="b">
+
+    <nav class=" container navbar navbar-expand-lg">
+  <a class="navbar-brand border-right pr-3" href="#"><img ng-src={{logo}} class="img-fluid"></a>
+  <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto font-weight-bold">
+      <li class="nav-item">
+        <a class="nav-link" href="#" ng-click="Show()">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about" ng-click="Hide()">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Work</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-sm font-weight-light text-secondary bg-dark mr-2">Welcome Back, <span class="john">JohnDoe81</span></button>
+      <button class="btn btn-sm my-2 my-sm-0 Sign-Out">Client Sign-Out</button>
+    </form>
+  </div>
+</nav>
+
+
+
+<div class="ng-view">
+    
+</div>
+
+
+<div class="container" ng-show = "c">
+    <img ng-src="{{bimg}}" class="img-fluid mx-auto d-block big-img">
+</div>
+
+
+
+<button class="btn btn-sm mx-auto d-block font-weight-bold" ng-show = "c" id="feature-btn"><i class="fa fa-angle-double-left mr-3"></i>Featured Title<i class="fa fa-angle-double-right ml-3"></i></button>
+
+
+<div class="container py-5 px-5" id="feature" ng-show = "c">
+    <div class="row border-bottom pb-3">
+        <div class="col-2">
+            <img ng-src={{fimg}} class="img-fluid">
+        </div>
+        <div class="col-2">
+            <img ng-src={{fimg1}} class="img-fluid">
+        </div>
+        <div class="col-2">
+            <img ng-src={{fimg2}} class="img-fluid">
+        </div>
+        <div class="col-sm-6 mt-4">
+
+            <h4><i class="fa fa-bandcamp text-light mr-3"></i>Krili havtret hyo gustripast</h4>
+            <p class="text-secondary ml-5">Krili havtret hyo gustripast</p>
+            <p class="text-secondary mt-4">Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum. Proin ut erat quis nulla tempor imperdiet ac et lorem.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="container py-5 px-5" id="work">
+    <div class="row text-center" id="work-row">
+        <div class="col-lg-4" >
+            <span class="work-icon"><i class="fa fa-codiepie"></i></span>
+            <div class="px-2" id="work-col">
+            <h5 class="mt-4 font-weight-bold">RESEARCH</h5>
+            <p class="font-weight-light">Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum.</p>
+            <button class="btn btn-sm btn-outline-dark font-weight-light rounded-0">learn more</button>
+            </div>
+        </div>
+        <div class="col-lg-4" id="work-row-col">
+            <span class="work-icon"><i class="fa fa-codiepie"></i></span>
+            <div class="px-2" id="work-col">
+            <h5 class="mt-4 font-weight-bold">RESEARCH</h5>
+            <p class="font-weight-light">Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum.</p>
+            <button class="btn btn-sm btn-outline-dark font-weight-light rounded-0">learn more</button>
+            </div>
+        </div>
+        <div class="col-lg-4" id="work-row-col">
+            <span class="work-icon"><i class="fa fa-codiepie"></i></span>
+            <div class="px-2" id="work-col">
+            <h5 class="mt-4 font-weight-bold">RESEARCH</h5>
+            <p class="font-weight-light">Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum.</p>
+            <button class="btn btn-sm btn-outline-dark font-weight-light rounded-0">learn more</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<div class="container my-5 py-5" id="tabs">
+    <div class="tab-btn">
+     <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="btn px-5 rounded-0" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn px-5 rounded-0" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn px-5 rounded-0" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content py-5" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="row">
+                <div class="col-lg-1 ">
+                        <div class="nav nav-pills rounded-circle mt-5 ml-4 mb-5" id="pills-tab" role="tablist">
+                              <button class="btn border-rounded mx-auto" id="pills-profile-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                  <i class="fa fa-angle-left text-dark"></i>
+                              </button>
+                        </div>
+                </div>
+
+                <div class="col-lg-3 ml-lg-5 px-2 py-2" id="tab-col">
+                    <h6><img ng-src={{kimg}} class=" mr-3"></i>Krili</h6>
+                    <p class="text-secondary ml-4">Krili havtret hyo</p>
+                    <p class="text-secondary mt-4">Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci.</p>
+                </div>
+
+                <div class="col-lg-3 px-2 py-2" id="tab-col">
+                   <h6><img ng-src={{kimg}} class=" mr-3"></i>gustripast</h6>
+                   <p class="text-secondary ml-4">Krili havtret hyo</p>
+                   <p class="text-secondary mt-4">Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci.</p>
+                </div>
+
+                <div class="col-lg-3 px-2 py-2" id="tab-col">
+                   <h6><img ng-src={{kimg}} class=" mr-3"></i>Krili havtret</h6>
+                   <p class="text-secondary ml-4">Krili havtret hyo</p>
+                   <p class="text-secondary mt-4">Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci.</p>
+                </div>
+                <div class="col-lg-1 ml-3 text-center">
+                   <div class="nav nav-pills rounded-circle mt-5 ml-4 mb-5" id="pills-tab" role="tablist">
+                              <button class="btn border-rounded mx-auto" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                  <i class="fa fa-angle-right text-dark"></i>
+                              </button>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="row">
+               <div class="col-lg-1 text-center">
+                   <div class="nav nav-pills rounded-circle mt-5 ml-4 mb-5" id="pills-tab" role="tablist">
+                              <button class="btn border-rounded mx-auto" id="pills-profile-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                  <i class="fa fa-angle-left text-dark"></i>
+                              </button>
+                        </div>
+                </div>
+
+                <div class="col-lg-3 ml-lg-5 px-2 py-2" id="tab-col">
+                    <h6><i class="fa fa-assistive-listening-systems text-light mr-3"></i>Krili havtret hyo gustripast</h6>
+                    <p class="text-secondary ml-5">Krili havtret hyo</p>
+                    <p class="text-secondary mt-4">Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci.</p>
+                </div>
+
+                <div class="col-lg-3 px-2 py-2" id="tab-col">
+                    <h6><i class="fa fa-assistive-listening-systems text-light mr-3"></i>Krili havtret hyo gustripast</h6>
+                    <p class="text-secondary ml-5">Krili havtret hyo</p>
+                    <p class="text-secondary mt-4">Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci.</p>
+                </div>
+
+                <div class="col-lg-3 px-2 py-2" id="tab-col">
+                   <h6><i class="fa fa-assistive-listening-systems text-light mr-3"></i>Krili havtret hyo gustripast</h6>
+                   <p class="text-secondary ml-5">Krili havtret hyo</p>
+                   <p class="text-secondary mt-4">Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci.</p>
+                </div>
+                <div class="col-lg-1 ml-3 text-center">
+                   <div class="nav nav-pills rounded-circle mt-5 ml-4 mb-5" id="pills-tab" role="tablist">
+                              <button class="btn border-rounded mx-auto" id="pills-profile-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                  <i class="fa fa-angle-right text-dark"></i>
+                              </button>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+             <div class="row">
+                 <div class="col-lg-1 text-center">
+                      <div class="nav nav-pills rounded-circle mt-5 ml-4 mb-5" id="pills-tab" role="tablist">
+                              <button class="btn border-rounded mx-auto" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                  <i class="fa fa-angle-left text-dark"></i>
+                              </button>
+                        </div>
+                </div>
+
+                <div class="col-lg-3 ml-lg-5 px-2 py-2" id="tab-col">
+                    <h6><i class="fa fa-assistive-listening-systems text-light mr-3"></i>Krili havtret hyo gustripast</h6>
+                    <p class="text-secondary ml-5">Krili havtret hyo</p>
+                    <p class="text-secondary mt-4">Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci.</p>
+                </div>
+
+                <div class="col-lg-3 px-2 py-2" id="tab-col">
+                   <h6><i class="fa fa-assistive-listening-systems text-light mr-3"></i>Krili havtret hyo gustripast</h6>
+                   <p class="text-secondary ml-5">Krili havtret hyo</p>
+                   <p class="text-secondary mt-4">Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci.</p>
+                </div>
+
+                <div class="col-lg-3 px-2 py-2" id="tab-col">
+                   <h6><i class="fa fa-assistive-listening-systems text-light mr-3"></i>Krili havtret hyo gustripast</h6>
+                   <p class="text-secondary ml-5">Krili havtret hyo</p>
+                   <p class="text-secondary mt-4">Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci.</p>
+                </div>
+                <div class="col-lg-1 ml-3 text-center">
+                   <div class="nav nav-pills rounded-circle mt-5 ml-4 mb-5" id="pills-tab" role="tablist">
+                              <button class="btn border-rounded mx-auto" id="pills-profile-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                  <i class="fa fa-angle-right text-dark"></i>
+                              </button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="container" id="news">
+    <div class="row text-light">
+        <div class="col-lg-6 py-5">
+            <img ng-src={{pimg}} class="img-fluid dark-img mt-5 ml-5 float-right">
+            <h4 class="font-weight-bold">Pharetra Eget</h4>
+            <p>Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum.</p>
+            <p class="mt-4">Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum.</p>
+        </div>
+        <div class="col-lg-1">
+            <img ng-src={{mid}} class="img-fluid h-100 w-25 hidden-img">
+        </div>
+        <div class="col-lg-5 py-5" id="news-input">
+            <h4 class="font-weight-bold">Newsletter <span class="font-weight-light">Subscription</span></h4>
+            <div class="input-group my-3 mb-5">
+               <input type="text" class="form-control bg-dark text-light border-0" placeholder="Your Email">
+                  <div class="input-group-append">
+                      <span class="input-group-text font-weight-bold border-0">Sign-Up</span>
+                  </div>
+            </div>
+            <p class="text-center float-left py-2 px-2">
+                <i class="fa fa-twitter mb-3"></i><br>
+                <button class="btn btn-sm font-weight-bold" id="follow">Follow</button>
+            </p>
+            <p class=" font-weight-light px-4 py-3" id="themeforest">RT @_1981_: Check out his awesome template on #themeforest
+                 - http://www.themeforest.net</p>
+        </div>        
+    </div>    
+</div>
+
+
+
+<div class="container" id="flicker">
+    <div class="row">
+        <div class="col-lg-5 py-5 px-4" id="flicker-1st-col">
+            <h5 id="flicker-1st-col-row" class="pb-3">Flickr</h5>
+            <div class="row mb-3 py-3 px-4">
+                <div class="col-3 col-md-3">
+                    <img ng-src={{flicker}} class="img-fluid">
+                </div>
+                <div class="col-3 col-md-3">
+                     <img ng-src={{flicker}} class="img-fluid">
+                </div>
+                <div class="col-3">
+                     <img src="images/9.png" class="img-fluid">
+                </div>
+                <div class="col-3">
+                     <img ng-src={{flicker}} class="img-fluid">
+                </div>
+            </div>
+            <div class="row px-4">
+                <div class="col-3">
+                    <img ng-src={{flicker}} class="img-fluid">
+                </div>
+                <div class="col-3">
+                     <img ng-src={{flicker}} class="img-fluid">
+                </div>
+                <div class="col-3">
+                     <img ng-src={{flicker}} class="img-fluid">
+                </div>
+                <div class="col-3">
+                     <img ng-src={{flicker}} class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 py-5 px-4 text-center">
+            <h5 id="flicker-1st-col-row" class="mb-4 pb-3">Featured Clients</h5>
+            <img ng-src={{client1}} class="img-fluid mb-4"><br>
+            <img ng-src={{client2}} class="img-fluid mb-4"><br>
+            <img ng-src={{client3}} class="img-fluid mb-4"><br>
+            <img ng-src={{client4}} class="img-fluid mb-4">
+        </div>
+        <div class="col-lg-2 py-5 px-4 text-center">
+            <h5 id="flicker-1st-col-row" class="mb-4 pb-3">Our Friends</h5>
+            <p><a href="" class="text-dark">GraphicRiver</a></p>
+            <p><a href="" class="text-dark">ThemeForest</a></p>
+            <p><a href="" class="text-dark">NineteenEightyOne</a></p>
+            <p><a href="" class="text-dark">SuiteTuts</a></p>
+            <p><a href="" class="text-dark">WeAreRuckus</a></p>
+        </div>
+        <div class="col-lg-2 py-5 text-center">
+            <h5 id="flicker-1st-col-row" class="mb-4 pb-3">Pages</h5>
+            <p><a href="" class="text-dark">Home</a></p>
+            <p><a href="" class="text-dark">About</a></p>
+            <p><a href="" class="text-dark">Blog</a></p>
+            <p><a href="" class="text-dark">Contact</a></p>
+            <p><a href="" class="text-dark">Work</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<footer class="page-footer font-small blue">
+    <div class="container" id="footer-con">
+        <div class="row py-3 font-weight-bold text-center">
+            <div class="col-lg-6 text-lg-left">
+                Copyright 2011 | Nineteen Eighty-One
+            </div>
+            <div class="col-lg-6 text-lg-right">
+                FAQ     /     Privacy Policy     /     API     /     Advertise
+            </div>
+        </div>
+  </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <script type="text/javascript" src="bootstrap js/bootstrap.min.js"></script>
+</body>
+</html>
