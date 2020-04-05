@@ -81,6 +81,9 @@ a.controller('b', function($scope){
             $scope.c = false;
             $scope.d = true;
             $scope.e = true;
+            $scope.row = {
+                "margin-top" : "unset"
+                 }
 
         }
         $scope.Hidework = function(){
@@ -89,7 +92,7 @@ a.controller('b', function($scope){
             $scope.f = true;
 
         }
-
+  
         $scope.Hidecontact = function(){
             $scope.c = false;
             $scope.e = false;
@@ -107,25 +110,37 @@ a.controller('b', function($scope){
          $scope.Show = function(){
             $scope.c = true;
             $scope.e = true;
+            $scope.row = {
+                "margin-top" : "-85px"
+                 }
         }
 
         $scope.homeabout = function(){
             $scope.c = true;
-            $scope.d = false; 
+            $scope.d = false;
+            $scope.row = {
+                "margin-top" : "-85px"
+                 } 
 
         }
 
         $scope.homework = function(){
             $scope.c = true;
             $scope.e = true;
-            $scope.f = false;         
+            $scope.f = false; 
+            $scope.row = {
+                "margin-top" : "-85px"
+                 }        
             
         }
         $scope.homecontact = function(){
             $scope.c = true;
             $scope.e = true;
             $scope.f = false;
-            $scope.g = false;         
+            $scope.g = false;
+            $scope.row = {
+                "margin-top" : "-85px"
+                 }         
             
         }
         $scope.homeblog = function(){
@@ -133,7 +148,10 @@ a.controller('b', function($scope){
             $scope.e = true;
             $scope.f = false;
             $scope.g = false;
-            $scope.h = false;         
+            $scope.h = false;
+            $scope.row = {
+                "margin-top" : "-85px"
+                 }         
             
         }
 
