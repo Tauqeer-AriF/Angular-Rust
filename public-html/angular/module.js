@@ -7,20 +7,14 @@ a.config(['$routeProvider', function($routeProvider){
     when('/about', {
         templateUrl: 'pages/about.html',
     }).
-    when('/places', {
-        templateUrl: 'pages/places.html',
+    when('/work', {
+        templateUrl: 'pages/work.html',
     }).
      when('/blog', {
         templateUrl: 'pages/blog.html',
     }).
-    when('/service', {
-        templateUrl: 'pages/service.html',
-    }).
      when('/contact', {
         templateUrl: 'pages/contact.html',
-    }).
-      when('/slider', {
-        templateUrl: 'pages/slider.html',
     }).
     otherwise({
         redirectTo: 'index.html',
@@ -44,25 +38,104 @@ a.controller('b', function($scope){
     $scope.client3 = "images/13.png";
     $scope.client4 = "images/14.png";
 
+   $scope.wcol = [
+      {
+        head:"Krili havtret hyo gustripast", head2:"Krili havtret hyo gustripast" ,
+         pargraph:"Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend,Maecenas ullamcorper tempor purus id mattis. Curabitur pellentesque, ante nec posuere lobortis, diam nulla sagittis lorem." 
+        },
 
+         {
+        head:"Krili havtret hyo gustripast", head2:"Krili havtret hyo gustripast" ,
+         pargraph:"Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend,Maecenas ullamcorper tempor purus id mattis. Curabitur pellentesque, ante nec posuere lobortis, diam nulla sagittis lorem." 
+        },
+
+         {
+        head:"Krili havtret hyo gustripast", head2:"Krili havtret hyo gustripast" ,
+         pargraph:"Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend,Maecenas ullamcorper tempor purus id mattis. Curabitur pellentesque, ante nec posuere lobortis, diam nulla sagittis lorem." 
+        },
+
+         {
+        head:"Krili havtret hyo gustripast", head2:"Krili havtret hyo gustripast" ,
+         pargraph:"Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend,Maecenas ullamcorper tempor purus id mattis. Curabitur pellentesque, ante nec posuere lobortis, diam nulla sagittis lorem." 
+        },
+
+         {
+        head:"Krili havtret hyo gustripast", head2:"Krili havtret hyo gustripast" ,
+         pargraph:"Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend,Maecenas ullamcorper tempor purus id mattis. Curabitur pellentesque, ante nec posuere lobortis, diam nulla sagittis lorem." 
+        },
+
+         {
+        head:"Krili havtret hyo gustripast", head2:"Krili havtret hyo gustripast" ,
+         pargraph:"Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend,Maecenas ullamcorper tempor purus id mattis. Curabitur pellentesque, ante nec posuere lobortis, diam nulla sagittis lorem." 
+        },
+   ]
 
     $scope.c = true;
     $scope.d = true;
+    $scope.e = true;
+    $scope.f = true;
+    $scope.g = true;
+    $scope.h = true;
 
-        $scope.Hide = function(){
+        $scope.Hideabout = function(){
             $scope.c = false;
             $scope.d = true;
+            $scope.e = true;
 
         }
-        
+        $scope.Hidework = function(){
+            $scope.c = false;
+            $scope.e = false;
+            $scope.f = true;
+
+        }
+
+        $scope.Hidecontact = function(){
+            $scope.c = false;
+            $scope.e = false;
+            $scope.f = false;
+            $scope.g = true;
+        }
+        $scope.Hideblog = function(){
+            $scope.c = false;
+            $scope.e = false;
+            $scope.f = false;
+            $scope.g = false;
+            $scope.h = true;
+        }
+
          $scope.Show = function(){
             $scope.c = true;
+            $scope.e = true;
         }
 
-        $scope.home = function(){
+        $scope.homeabout = function(){
             $scope.c = true;
-            $scope.d = false;
+            $scope.d = false; 
+
+        }
+
+        $scope.homework = function(){
+            $scope.c = true;
+            $scope.e = true;
+            $scope.f = false;         
             
         }
+        $scope.homecontact = function(){
+            $scope.c = true;
+            $scope.e = true;
+            $scope.f = false;
+            $scope.g = false;         
+            
+        }
+        $scope.homeblog = function(){
+            $scope.c = true;
+            $scope.e = true;
+            $scope.f = false;
+            $scope.g = false;
+            $scope.h = false;         
+            
+        }
+
 
 });
